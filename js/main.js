@@ -11,7 +11,6 @@
   const pretty = { mocha: 'Mocha', macchiato: 'Macchiato', frappe: 'Frappé', latte: 'Latte' };
   const flavorBtn = document.getElementById('flavor');
   const flavorName = flavorBtn.querySelector('.flavor__name');
-  const ffFlavor = document.getElementById('ff-flavor');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   const favicon = document.querySelector('link[rel="icon"]');
 
@@ -25,7 +24,6 @@
   const applyFlavor = (f) => {
     root.dataset.flavor = f;
     flavorName.textContent = f === 'frappe' ? 'frappé' : f;
-    ffFlavor.textContent = pretty[f];
     themeMeta.setAttribute('content', css('--base'));
     setFavicon();
     flavorBtn.setAttribute('aria-label', `Catppuccin ${pretty[f]}. Switch flavor`);
