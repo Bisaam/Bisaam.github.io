@@ -158,7 +158,17 @@
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (!e.isIntersecting) continue;
-      e.target.classList.add('in');
+      const el = e.target;
+      el.classList.add('in');
+      // once revealed, hand transitions back to the element (e.g. card hover glow)
+      const settle = () => {
+        el.removeEventListener('transitionend', onEnd);
+        el.classList.remove('reveal', 'in');
+        el.style.transitionDelay = '';
+      };
+      const onEnd = (ev) => { if (ev.target === el && ev.propertyName === 'opacity') settle(); };
+      el.addEventListener('transitionend', onEnd);
+      setTimeout(settle, 1400);
       const num = e.target.querySelector('[data-count]');
       if (num) countUp(num);
       io.unobserve(e.target);

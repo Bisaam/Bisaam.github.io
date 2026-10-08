@@ -1,2 +1,3 @@
-# CV contains a phone number; keep it out of the public repo
+# CV files contain a phone number; keep them out of the public repo
 *.pdf
+*.docx

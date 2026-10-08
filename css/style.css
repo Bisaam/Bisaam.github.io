@@ -270,7 +270,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   position: relative; display: flex; flex-direction: column;
   padding: 26px; border-radius: var(--radius);
   background: var(--mantle); border: 1px solid var(--surface0);
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background-color .4s ease;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .45s ease, box-shadow .5s ease, background-color .4s ease;
 }
 .card:hover {
   transform: translateY(-4px);
