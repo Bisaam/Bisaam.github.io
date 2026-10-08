@@ -188,10 +188,13 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .c-bool { color: var(--peach); }
 
 .term--hero { position: relative; }
-.prompt { display: flex; align-items: center; gap: 0; color: var(--text); margin-bottom: 16px; min-height: 1.6em; }
-.seg { background: var(--mauve); color: var(--crust); font-weight: 700; padding: 0 .55em 0 .6em; border-radius: 4px 0 0 4px; display: inline-flex; gap: .5em; align-items: center; line-height: 1.6; }
-.seg-end { color: var(--mauve); line-height: 1; font-size: 1.6em; margin-left: -1px; transform: translateY(-.02em); }
-.prompt #typed { margin-left: .35em; color: var(--green); }
+/* Kali-style two-line zsh prompt; line-height: normal lets the box-drawing corners join across lines */
+.prompt { color: var(--text); margin-bottom: 18px; line-height: normal; }
+.prompt > div { white-space: nowrap; }
+.p-line, .p-user { color: var(--sapphire); }
+.p-at { color: var(--mauve); }
+.p-host, .p-path, .p-cmd { color: var(--green); }
+.p-sym { color: var(--text); font-weight: 700; }
 .caret { display: inline-block; width: .55em; height: 1.1em; background: var(--rosewater); vertical-align: -.18em; margin-left: 2px; animation: blink 1.1s steps(1) infinite; }
 
 .ff { display: flex; gap: 22px; align-items: flex-start; transition: opacity .5s ease; }
@@ -203,7 +206,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .ff__info dt { color: var(--blue); font-weight: 700; flex: none; }
 .ff__info dt::after { content: ":"; color: var(--overlay1); }
 .ff__info dd { color: var(--subtext1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ff__head { font-weight: 700; color: var(--text); }
+.ff__info > .ff__head { display: block; font-weight: 700; color: var(--text); }
 .ff__rule { color: var(--surface2); }
 .ff__swatches { margin-top: 10px; gap: 0 !important; }
 .ff__swatches i { width: 22px; height: 14px; }

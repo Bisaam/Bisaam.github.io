@@ -13,12 +13,21 @@
   const flavorName = flavorBtn.querySelector('.flavor__name');
   const ffFlavor = document.getElementById('ff-flavor');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const favicon = document.querySelector('link[rel="icon"]');
+
+  // the original ">_" icon, redrawn in the active flavor's colors
+  const setFavicon = () => {
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='${css('--base')}'/>`
+      + `<text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='${css('--mauve')}'>&gt;_</text></svg>`;
+    favicon.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+  };
 
   const applyFlavor = (f) => {
     root.dataset.flavor = f;
     flavorName.textContent = f === 'frappe' ? 'frappé' : f;
     ffFlavor.textContent = pretty[f];
     themeMeta.setAttribute('content', css('--base'));
+    setFavicon();
     flavorBtn.setAttribute('aria-label', `Catppuccin ${pretty[f]}. Switch flavor`);
     grid.recolor();
   };
