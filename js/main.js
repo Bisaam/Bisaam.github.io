@@ -15,10 +15,10 @@
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   const favicon = document.querySelector('link[rel="icon"]');
 
-  // the original ">_" icon, redrawn in the active flavor's colors
+  // ">_" drawn as strokes (not text) so it sits dead-centre in any browser; recoloured per flavor
   const setFavicon = () => {
     const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='${css('--base')}'/>`
-      + `<text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='${css('--mauve')}'>&gt;_</text></svg>`;
+      + `<path d='M8.5 11 14 16l-5.5 5M16.5 21h7' fill='none' stroke='${css('--mauve')}' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/></svg>`;
     favicon.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
   };
 
