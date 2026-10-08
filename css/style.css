@@ -205,7 +205,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .ff__info > div { display: flex; gap: .6em; }
 .ff__info dt { color: var(--blue); font-weight: 700; flex: none; }
 .ff__info dt::after { content: ":"; color: var(--overlay1); }
-.ff__info dd { color: var(--subtext1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ff__info dd { color: var(--subtext1); min-width: 0; }
 .ff__info > .ff__head { display: block; font-weight: 700; color: var(--text); }
 .ff__rule { color: var(--surface2); }
 .ff__swatches { margin-top: 10px; gap: 0 !important; }
