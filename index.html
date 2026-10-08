@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" data-flavor="mocha">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Bisaam — Cybersecurity, Linux &amp; Networking</title>
+  <meta name="description" content="Muhammad Bisaam — hands-on technology enthusiast in Lahore focused on cybersecurity, Linux, networking and systems. CompTIA Network+ and Security+.">
+  <meta name="theme-color" content="#1e1e2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e1e2e'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%23cba6f7'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/iosevka-nfm-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/iosevka-nfm-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');try{var f=localStorage.getItem('flavor');if(f)document.documentElement.dataset.flavor=f}catch(e){}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="logo" href="#top" aria-label="Back to top">bisaam<span class="logo__at">@</span>lab<span class="logo__cursor" aria-hidden="true"></span></a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#about">whoami</a>
+      <a href="#experience">experience</a>
+      <a href="#security">security</a>
+      <a href="#projects">projects</a>
+      <a href="#toolbox">toolbox</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="flavor" type="button" id="flavor" aria-label="Switch Catppuccin flavor">
+        <span class="flavor__dot" aria-hidden="true"></span><span class="flavor__name">mocha</span>
+      </button>
+      <a class="btn btn--ghost btn--sm" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <canvas class="hero__grid" id="grid" aria-hidden="true"></canvas>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><span class="eyebrow__rule"></span>Cybersecurity · Linux · Networking · Lahore</p>
+        <h1 class="hero__title reveal">I learn how systems work by <em>taking them apart.</em></h1>
+        <p class="hero__lead reveal">
+          IT trainee at <strong>Stewart Pakistan</strong>, <strong>CompTIA Network+</strong> and
+          <strong>Security+</strong> certified. I root lab VMs, read traffic in Wireshark, and
+          self-host my own services on hardware that probably wasn't meant to run them.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#projects">View projects <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="https://github.com/Bisaam" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="term term--hero reveal" aria-label="Terminal showing a fastfetch summary">
+        <div class="term__bar">
+          <span class="term__dots"><i></i><i></i><i></i></span>
+          <span class="term__title">bisaam@lab: ~</span>
+        </div>
+        <div class="term__body">
+          <p class="prompt"><span class="seg"><i class="nf">&#xf17c;</i> ~</span><span class="seg-end">&#xe0b4;</span> <span id="typed" data-text="fastfetch"></span><span class="caret" aria-hidden="true"></span></p>
+          <div class="ff" id="ff">
+<pre class="ff__logo" aria-hidden="true">  ▄▄▄▄▄▄▄▄▄
+ █         █
+ █  <b>▄▀▀▀▄</b>  █
+ █  <b>█   █</b>  █
+ █ <b>▄█▄▄▄█▄</b> █
+ █ <b>███ ███</b> █
+ █ <b>███▄███</b> █
+ █ <b>▀▀▀▀▀▀▀</b> █
+  ▀▄     ▄▀
+    ▀▄▄▄▀</pre>
+            <dl class="ff__info">
+              <div class="ff__head"><span class="c-mauve">bisaam</span>@<span class="c-mauve">lab</span></div>
+              <div class="ff__rule">-----------</div>
+              <div><dt>OS</dt><dd>Linux · Windows · macOS</dd></div>
+              <div><dt>Role</dt><dd>EUS Trainee @ Stewart</dd></div>
+              <div><dt>Certs</dt><dd>Network+ · Security+</dd></div>
+              <div><dt>Labs</dt><dd>PEH VMs -&gt; root</dd></div>
+              <div><dt>Font</dt><dd>Iosevka Nerd Font Mono</dd></div>
+              <div><dt>Theme</dt><dd>Catppuccin <span id="ff-flavor">Mocha</span></dd></div>
+              <div><dt>Typing</dt><dd>~100 WPM</dd></div>
+              <div class="ff__swatches" aria-hidden="true"><i class="bg-red"></i><i class="bg-peach"></i><i class="bg-yellow"></i><i class="bg-green"></i><i class="bg-teal"></i><i class="bg-blue"></i><i class="bg-mauve"></i><i class="bg-pink"></i></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats" aria-label="Highlights">
+    <div class="container stats__inner">
+      <div class="stat reveal"><span class="stat__num" data-count="2">2</span><span class="stat__label">CompTIA certifications</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="100" data-prefix="~">~100</span><span class="stat__label">WPM typing speed</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="5">5</span><span class="stat__label">Tools shipped on GitHub</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="3">3</span><span class="stat__label">Operating systems, daily</span></div>
+    </div>
+  </section>
+
+  <!-- 01 About -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="label reveal">01 / whoami</p>
+      <h2 class="section__title reveal">Built in the terminal, <em>tested in the lab.</em></h2>
+
+      <div class="about">
+        <div class="about__copy">
+          <p class="reveal">I'm <strong>Muhammad Bisaam</strong>, a hands-on technology enthusiast from Lahore focused on
+            <strong>cybersecurity, Linux, networking and systems</strong>. I learn by building and experimenting.</p>
+          <p class="reveal">In practice that means working with penetration-testing tools and vulnerable machines,
+            running <strong>self-hosted services</strong> at home, and writing <strong>small tools</strong> for everyday
+            annoyances: a Wi-Fi indicator that checks real connectivity, a mouse-driven desktop switcher, a retro terminal-style clock.</p>
+          <p class="reveal">I'm comfortable across <strong>Windows, Linux and macOS</strong>, with Linux as my daily driver,
+            and I'm most interested in how systems work under the hood.</p>
+
+          <dl class="facts reveal">
+            <div><dt><i class="nf">&#xf19d;</i> Education</dt><dd>Intermediate, Punjab Group of Colleges (78%)<br>Matriculation (80%)</dd></div>
+            <div><dt><i class="nf">&#xf1ab;</i> Languages</dt><dd>Urdu (native) · English</dd></div>
+            <div><dt><i class="nf">&#xf041;</i> Based in</dt><dd>Lahore, Pakistan</dd></div>
+          </dl>
+        </div>
+
+        <div class="term reveal">
+          <div class="term__bar">
+            <span class="term__dots"><i></i><i></i><i></i></span>
+            <span class="term__title">~/.config/bisaam/focus.toml</span>
+          </div>
+<pre class="term__body code"><span class="c-com"># what I'm into right now</span>
+<span class="c-hdr">[security]</span>
+<span class="c-key">tools</span>    = [<span class="c-str">"metasploit"</span>, <span class="c-str">"burp"</span>, <span class="c-str">"wireshark"</span>]
+<span class="c-key">labs</span>     = <span class="c-str">"PEH VMs -&gt; rooted"</span>
+<span class="c-key">academy</span>  = <span class="c-str">"PortSwigger, most labs"</span>
+
+<span class="c-hdr">[systems]</span>
+<span class="c-key">os</span>       = [<span class="c-str">"linux"</span>, <span class="c-str">"windows"</span>, <span class="c-str">"macos"</span>]
+<span class="c-key">homelab</span>  = [<span class="c-str">"docker"</span>, <span class="c-str">"jellyfin"</span>, <span class="c-str">"immich"</span>]
+
+<span class="c-hdr">[status]</span>
+<span class="c-key">learning</span> = <span class="c-bool">true</span><span class="caret" aria-hidden="true"></span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <p class="label reveal">02 / Experience</p>
+      <h2 class="section__title reveal">Fixing real machines for <em>real users.</em></h2>
+
+      <ol class="timeline">
+        <li class="tl tl--current reveal">
+          <div class="tl__head">
+            <h3>Trainee, End User Services <span class="tl__org">· Stewart Pakistan</span></h3>
+            <span class="tl__when">Jul 2026 – Present</span>
+          </div>
+          <p>Day-to-day technical support for users: troubleshooting common hardware and software issues, installing
+            and maintaining software, and opening up laptops for hands-on hardware work.</p>
+          <ul class="chips"><li class="chip chip--hl">Hardware work</li><li class="chip">Troubleshooting</li><li class="chip">Software installs</li><li class="chip">End-user support</li></ul>
+        </li>
+        <li class="tl reveal">
+          <div class="tl__head">
+            <h3>Practical Ethical Hacking <span class="tl__org">· Training</span></h3>
+            <span class="tl__when">Completed</span>
+          </div>
+          <p>Hands-on penetration-testing training covering the full workflow and a broad range of command-line security
+            tools, finished by rooting the course's vulnerable lab machines.</p>
+          <ul class="chips"><li class="chip chip--hl">Lab VMs rooted</li><li class="chip">Pentest workflow</li><li class="chip">CLI tooling</li></ul>
+        </li>
+        <li class="tl reveal">
+          <div class="tl__head">
+            <h3>CompTIA Security+ &amp; Network+ <span class="tl__org">· Certifications</span></h3>
+            <span class="tl__when">Completed</span>
+          </div>
+          <p>Vendor-neutral grounding in security concepts, threats and controls, alongside networking fundamentals,
+            infrastructure and troubleshooting.</p>
+          <ul class="chips"><li class="chip chip--hl">Security+</li><li class="chip chip--hl">Network+</li></ul>
+        </li>
+        <li class="tl reveal">
+          <div class="tl__head">
+            <h3>Contributor <span class="tl__org">· tldr pages</span></h3>
+            <span class="tl__when">Open source</span>
+          </div>
+          <p>Contributed to <a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr pages</a>,
+            the community-maintained collection of simplified, example-first command-line documentation.</p>
+          <ul class="chips"><li class="chip">Open source</li><li class="chip">CLI docs</li><li class="chip">Git &amp; GitHub</li></ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 Security -->
+  <section class="section" id="security">
+    <div class="container">
+      <p class="label reveal">03 / Security</p>
+      <h2 class="section__title reveal">Offense, practiced <em>in the lab.</em></h2>
+
+      <div class="grid grid--3">
+        <article class="card reveal" style="--accent: var(--red)">
+          <div class="card__icon"><i class="nf">&#xf188;</i></div>
+          <p class="card__kicker">Exploitation</p>
+          <h3>Metasploit Framework</h3>
+          <p>msfconsole for exploitation, msfvenom for generating payloads in reverse-shell based lab exercises.</p>
+          <ul class="chips chips--sm"><li class="chip">msfconsole</li><li class="chip">msfvenom</li><li class="chip">Reverse shells</li></ul>
+        </article>
+        <article class="card reveal" style="--accent: var(--peach)">
+          <div class="card__icon"><i class="nf">&#xf0ac;</i></div>
+          <p class="card__kicker">Web security</p>
+          <h3>Burp Suite</h3>
+          <p>Practical web application security testing: intercepting, inspecting and tampering with HTTP traffic.</p>
+          <ul class="chips chips--sm"><li class="chip">Proxy</li><li class="chip">Web apps</li><li class="chip">Manual testing</li></ul>
+        </article>
+        <article class="card reveal" style="--accent: var(--yellow)">
+          <div class="card__icon"><i class="nf">&#xf02d;</i></div>
+          <p class="card__kicker">Training</p>
+          <h3>PortSwigger Academy</h3>
+          <p>Worked through most of the practical labs in the Web Security Academy, covering the common web vulnerability classes.</p>
+          <ul class="chips chips--sm"><li class="chip chip--hl">Most labs done</li><li class="chip">Web vulns</li></ul>
+        </article>
+        <article class="card reveal" style="--accent: var(--green)">
+          <div class="card__icon"><i class="nf">&#xf0b0;</i></div>
+          <p class="card__kicker">Network analysis</p>
+          <h3>Wireshark</h3>
+          <p>Capturing, filtering and analysing network traffic to see what's actually happening on the wire.</p>
+          <ul class="chips chips--sm"><li class="chip">Capture</li><li class="chip">Filters</li><li class="chip">Packet analysis</li></ul>
+        </article>
+        <article class="card reveal" style="--accent: var(--teal)">
+          <div class="card__icon"><i class="nf">&#xf09c;</i></div>
+          <p class="card__kicker">Hands-on</p>
+          <h3>Vulnerable machines</h3>
+          <p>Practiced against the vulnerable VMs provided with the PEH training and took them from recon to root.</p>
+          <ul class="chips chips--sm"><li class="chip chip--hl">Rooted</li><li class="chip">Recon</li><li class="chip">Exploitation</li></ul>
+        </article>
+        <article class="card reveal" style="--accent: var(--blue)">
+          <div class="card__icon"><i class="nf">&#xf120;</i></div>
+          <p class="card__kicker">Command line</p>
+          <h3>CLI security tools</h3>
+          <p>Comfortable living in the shell, using a broad range of command-line tools across the pentest workflow.</p>
+          <ul class="chips chips--sm"><li class="chip">Bash</li><li class="chip">Linux</li><li class="chip">Recon tools</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="label reveal">04 / Projects</p>
+      <h2 class="section__title reveal">Small tools for <em>everyday friction.</em></h2>
+
+      <div class="grid grid--3">
+        <article class="card project reveal" style="--accent: var(--green)">
+          <div class="mono">PL</div>
+          <p class="card__kicker">Networking · Python</p>
+          <h3>PacketLab</h3>
+          <p>A personal networking laboratory for experimenting with traffic, protocols and packet behaviour.</p>
+          <ul class="chips chips--sm"><li class="chip">Python</li><li class="chip">Scapy</li><li class="chip">Wireshark</li></ul>
+          <a class="card__link" href="https://github.com/Bisaam/PacketLab" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> Source ↗</a>
+        </article>
+        <article class="card project reveal" style="--accent: var(--sky)">
+          <div class="mono">WS</div>
+          <p class="card__kicker">macOS · Swift</p>
+          <h3>WifiStatus</h3>
+          <p>A menu-bar app that checks for actual internet connectivity instead of trusting the Wi-Fi signal icon.</p>
+          <ul class="chips chips--sm"><li class="chip">Swift</li><li class="chip">macOS</li><li class="chip">Menu bar</li></ul>
+          <a class="card__link" href="https://github.com/Bisaam/WifiStatus" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> Source ↗</a>
+        </article>
+        <article class="card project reveal" style="--accent: var(--mauve)">
+          <div class="mono">SS</div>
+          <p class="card__kicker">macOS · Swift</p>
+          <h3>Scroll-space-switcher</h3>
+          <p>Switch between desktops using your mouse, built on low-level macOS event handling.</p>
+          <ul class="chips chips--sm"><li class="chip">Swift</li><li class="chip">Event handling</li><li class="chip">macOS</li></ul>
+          <a class="card__link" href="https://github.com/Bisaam/Scroll-space-switcher" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> Source ↗</a>
+        </article>
+        <article class="card project reveal" style="--accent: var(--peach)">
+          <div class="mono">TC</div>
+          <p class="card__kicker">Desktop · PyQt6</p>
+          <h3>TUI-clock</h3>
+          <p>A retro, TUI-style desktop widget for Windows, macOS and Linux: clock, stopwatch, calculator, calendar, timers and more.</p>
+          <ul class="chips chips--sm"><li class="chip">Python</li><li class="chip">PyQt6</li><li class="chip">Cross-platform</li></ul>
+          <a class="card__link" href="https://github.com/Bisaam/TUI-clock" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> Source ↗</a>
+        </article>
+        <article class="card project reveal" style="--accent: var(--pink)">
+          <div class="mono">DF</div>
+          <p class="card__kicker">Terminal · Shell</p>
+          <h3>dotfiles</h3>
+          <p>The shell and terminal configuration behind my everyday command-line environment.</p>
+          <ul class="chips chips--sm"><li class="chip">Shell</li><li class="chip">Terminal</li><li class="chip">Config</li></ul>
+          <a class="card__link" href="https://github.com/Bisaam/dotfiles" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> Source ↗</a>
+        </article>
+        <article class="card project reveal" style="--accent: var(--blue)">
+          <div class="mono">HL</div>
+          <p class="card__kicker">Self-hosted · Docker</p>
+          <h3>Home lab</h3>
+          <p>Jellyfin, Immich and other self-hosted apps in Docker, plus a Jellyfin media server on Windows 11 installed natively on a smartphone.</p>
+          <ul class="chips chips--sm"><li class="chip">Docker</li><li class="chip">Jellyfin</li><li class="chip">Immich</li></ul>
+          <span class="card__link card__link--muted"><i class="nf">&#xf233;</i> Running at home</span>
+        </article>
+      </div>
+      <p class="more reveal"><a href="https://github.com/Bisaam?tab=repositories" target="_blank" rel="noopener">More on GitHub ↗</a></p>
+    </div>
+  </section>
+
+  <!-- 05 Toolbox -->
+  <section class="section" id="toolbox">
+    <div class="container">
+      <p class="label reveal">05 / Toolbox</p>
+      <h2 class="section__title reveal">What's in my <em>$PATH.</em></h2>
+
+      <div class="grid grid--4">
+        <div class="card toolset reveal">
+          <p class="toolset__title c-red"><i class="nf">&#xf132;</i> Security</p>
+          <ul class="chips"><li class="chip">Metasploit</li><li class="chip">Burp Suite</li><li class="chip">Wireshark</li><li class="chip">Web app security</li><li class="chip">Pentesting</li><li class="chip">CLI security tools</li></ul>
+        </div>
+        <div class="card toolset reveal">
+          <p class="toolset__title c-green"><i class="nf">&#xf233;</i> Systems</p>
+          <ul class="chips"><li class="chip"><i class="nf">&#xf17c;</i> Linux</li><li class="chip"><i class="nf">&#xf17a;</i> Windows</li><li class="chip"><i class="nf">&#xf179;</i> macOS</li><li class="chip"><i class="nf">&#xe7b0;</i> Docker</li><li class="chip">Jellyfin</li><li class="chip">Immich</li></ul>
+        </div>
+        <div class="card toolset reveal">
+          <p class="toolset__title c-sky"><i class="nf">&#xf0e8;</i> Networking</p>
+          <ul class="chips"><li class="chip">TCP/IP</li><li class="chip">DHCP</li><li class="chip">IP config</li><li class="chip">Port forwarding</li><li class="chip">LANs</li><li class="chip">Packet analysis</li></ul>
+        </div>
+        <div class="card toolset reveal">
+          <p class="toolset__title c-mauve"><i class="nf">&#xf121;</i> Code &amp; tools</p>
+          <ul class="chips"><li class="chip"><i class="nf">&#xe73c;</i> Python</li><li class="chip"><i class="nf">&#xe755;</i> Swift</li><li class="chip"><i class="nf">&#xf120;</i> Bash</li><li class="chip">PyQt6</li><li class="chip"><i class="nf">&#xf1d3;</i> Git</li><li class="chip"><i class="nf">&#xf09b;</i> GitHub</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Contact -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <p class="label reveal">06 / Contact</p>
+      <h2 class="contact__title reveal">Have a system that needs <em>figuring out?</em></h2>
+      <p class="contact__lead reveal">I'm open to IT, security and systems roles, internships and interesting problems. The fastest way to reach me:</p>
+      <a class="contact__email reveal" href="mailto:bisaam.khurram786@gmail.com">bisaam.khurram786@gmail.com</a>
+      <div class="contact__links reveal">
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/muhammadbisaamkhurram" target="_blank" rel="noopener"><i class="nf">&#xf0e1;</i> LinkedIn ↗</a>
+        <a class="btn btn--ghost" href="https://github.com/Bisaam" target="_blank" rel="noopener"><i class="nf">&#xf09b;</i> GitHub ↗</a>
+        <a class="btn btn--primary" href="mailto:bisaam.khurram786@gmail.com"><i class="nf">&#xf0e0;</i> Email <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year">2026</span> Muhammad Bisaam · Lahore, Pakistan</span>
+    <span class="footer__meta">set in Iosevka Nerd Font Mono · themed with Catppuccin</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
