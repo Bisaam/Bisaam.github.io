@@ -36,10 +36,10 @@
 .step p strong { color: var(--text); }
 .step a { color: var(--blue); border-bottom: 1px dashed color-mix(in srgb, var(--blue) 50%, transparent); }
 .step a:hover { color: var(--sapphire); }
-.step ul { margin: 0 0 16px; padding-left: 0; list-style: none; }
-.step ul li { position: relative; padding-left: 1.6em; margin-bottom: 8px; color: var(--subtext0); }
-.step ul li::before { content: "▸"; position: absolute; left: 0; color: var(--mauve); }
-.step ul li strong { color: var(--text); }
+.step ul:not(.chips) { margin: 0 0 16px; padding-left: 0; list-style: none; }
+.step ul:not(.chips) li { position: relative; padding-left: 1.6em; margin-bottom: 8px; color: var(--subtext0); }
+.step ul:not(.chips) li::before { content: "▸"; position: absolute; left: 0; color: var(--mauve); }
+.step ul:not(.chips) li strong { color: var(--text); }
 code.inline { font-family: var(--font); font-size: .9em; padding: 1px 6px; border-radius: 5px; background: var(--surface0); color: var(--peach); border: 1px solid var(--surface1); }
 
 /* Terminal command/output blocks */
@@ -81,3 +81,13 @@ code.inline { font-family: var(--font); font-size: .9em; padding: 1px 6px; borde
 
 /* Inline arrow spacing (Iosevka arrow glyph has no trailing gap) */
 .arw { margin: 0 .34em; color: inherit; }
+
+/* Notebook tree + ASCII summary panel */
+.tree, .panel { white-space: pre; overflow-x: auto; font-family: var(--font); line-height: 1.55; }
+.t-root { color: var(--mauve); font-weight: 700; }
+.t-b { color: var(--surface2); }
+.t-dir { color: var(--blue); font-weight: 700; }
+.t-box { color: var(--green); font-weight: 700; }
+.t-dim { color: var(--overlay1); }
+.t-note { color: var(--overlay0); font-style: italic; }
+.panel .star { color: var(--yellow); }

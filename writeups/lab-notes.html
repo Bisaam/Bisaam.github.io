@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-flavor="mocha">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab notebook — Muhammad Bisaam</title>
+  <meta name="description" content="A glimpse of how I document hands-on lab work: a structured CherryTree notebook with recon, enumeration, vulnerabilities, exploitation and privilege escalation for each machine.">
+  <meta name="theme-color" content="#1e1e2e">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e1e2e'/%3E%3Cpath d='M8.5 11 14 16l-5.5 5M16.5 21h7' fill='none' stroke='%23cba6f7' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/style.css?v=20261009d">
+  <link rel="stylesheet" href="../css/writeup.css?v=20261009d">
+  <script>document.documentElement.classList.add('js');try{var f=localStorage.getItem('flavor');if(f)document.documentElement.dataset.flavor=f}catch(e){}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="logo" href="../index.html" aria-label="Back to home">bisaam<span class="logo__dot">.</span>khurram</a>
+    <div class="nav__actions">
+      <a class="nav__back" href="../index.html#experience"><span aria-hidden="true">←</span> Back to site</a>
+      <button class="flavor" type="button" id="flavor" aria-label="Switch Catppuccin flavor">
+        <span class="flavor__dot" aria-hidden="true"></span><span class="flavor__name">mocha</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="container wrap">
+
+    <section class="wr-hero">
+      <p class="breadcrumb">
+        <a href="../index.html#experience">Experience</a>
+        <span class="sep">/</span> Practical Ethical Hacking
+      </p>
+      <div class="wr-titlerow">
+        <h1 class="wr-title">Lab notebook</h1>
+        <span class="badge-root"><i class="nf">&#xf02d;</i> A glimpse</span>
+      </div>
+      <p class="wr-lead">
+        While I work through a machine I keep a running notebook in <strong>CherryTree</strong>. Every box gets the
+        same shape (<strong>recon, enumeration, vulnerabilities, exploitation, privilege escalation</strong>) so I can
+        always retrace exactly how I got in. Here's a look at how I organise it, not a full walkthrough.
+      </p>
+    </section>
+
+    <!-- Structure -->
+    <section class="step reveal" style="padding-top:28px">
+      <p class="step__num">How it's organised</p>
+      <h2>One structure, every machine</h2>
+      <p>The notebook keeps the Web Security Academy work and the hands-on machines side by side. Each capstone box was taken to <strong>root</strong>; the note next to it is the route I used.</p>
+      <div class="cmd term">
+        <div class="term__bar"><span class="term__dots"><i></i><i></i><i></i></span><span class="term__title">~/Web Security Lab</span></div>
+        <div class="term__body"><pre class="tree"><span class="t-root"><i class="nf">&#xf07b;</i> Web Security Lab</span>
+<span class="t-b">├─</span> <span class="t-dir">Web Security Academy</span>   <span class="t-dim">PortSwigger labs + notes</span>
+<span class="t-b">│  ├─</span> CSRF
+<span class="t-b">│  ├─</span> Web LLM attacks
+<span class="t-b">│  └─</span> Authentication
+<span class="t-b">├─</span> <span class="t-dir">Ethical Hacking</span>        <span class="t-dim">methodology · OSINT · buffer overflow</span>
+<span class="t-b">├─</span> <span class="t-dir">Kioptrix</span>               <span class="t-dim">recon -> root</span>
+<span class="t-b">├─</span> <span class="t-dir">vulnserver</span>             <span class="t-dim">Windows buffer overflow (custom Python)</span>
+<span class="t-b">└─</span> <span class="t-dir">Course Capstone</span>        <span class="t-dim">5 machines, each taken to root</span>
+<span class="t-b">   ├─</span> <span class="t-box">Blue</span>        <span class="t-dim">Windows 7  · SMB EternalBlue</span>
+<span class="t-b">   ├─</span> <span class="t-box">Academy</span>     <span class="t-dim">Linux      · file upload -> writable cron</span>
+<span class="t-b">   ├─</span> <span class="t-box">Dev</span>         <span class="t-dim">Linux      · NFS loot -> sudo zip</span>
+<span class="t-b">   ├─</span> <span class="t-box">Butler</span>      <span class="t-dim">Windows 10 · Jenkins script console</span>
+<span class="t-b">   └─</span> <span class="t-box">BlackPearl</span>  <span class="t-dim">Linux      · Navigate CMS</span></pre></div>
+      </div>
+      <p>Per machine, the same branches repeat so nothing slips through:</p>
+      <ul class="chips">
+        <li class="chip chip--hl">Reconnaissance</li>
+        <li class="chip">Enumeration</li>
+        <li class="chip">Vulnerabilities</li>
+        <li class="chip">Exploitation</li>
+        <li class="chip">Privilege escalation</li>
+      </ul>
+    </section>
+
+    <!-- Sample note -->
+    <section class="step reveal">
+      <p class="step__num">A sample note</p>
+      <h2>I rewrite raw output into something I can act on</h2>
+      <p>After a scan I don't just keep the raw output; I boil it down to a summary that tells me where to start. This is the recon note for the <strong>Blue</strong> box:</p>
+      <div class="cmd term">
+        <div class="term__bar"><span class="term__dots"><i></i><i></i><i></i></span><span class="term__title">Blue · recon summary</span></div>
+        <div class="term__body"><pre class="panel"><span class="t-dim">╔════════════════════════════════════════════╗</span>
+<span class="t-dim">║</span>  TARGET: 192.168.10.7  (WIN-845Q99OO4PP)    <span class="t-dim">║</span>
+<span class="t-dim">║</span>  OS:     Windows 7 Ultimate SP1             <span class="t-dim">║</span>
+<span class="t-dim">╚════════════════════════════════════════════╝</span>
+
+<span class="t-dim">▸</span> <span class="hl">PRIORITY</span>
+  <span class="star">★★★★★</span>  445 SMB        <span class="t-dim">&lt;- start here</span>
+  <span class="star">★★★★★</span>  Windows 7 SP1  <span class="t-dim">old / unsupported</span>
+  <span class="star">★★★★</span><span class="t-dim">☆</span>  139 NetBIOS
+  <span class="star">★★★</span><span class="t-dim">☆☆</span>  135 / RPC
+  <span class="star">★★</span><span class="t-dim">☆☆☆</span>  5357 HTTPAPI
+
+<span class="t-note"># next: enumerate SMB on 445 (signing not required, guest allowed)</span></pre></div>
+      </div>
+      <div class="note">
+        <i class="nf">&#xf023;</i>
+        <p><strong>What's not here:</strong> the full notebook has the exploitation steps, credentials, keys and payloads from each machine. I keep those private, and I'm happy to walk through any box in detail in a conversation.</p>
+      </div>
+    </section>
+
+    <div class="wr-end">
+      <a class="btn btn--ghost" href="../index.html#experience"><span aria-hidden="true">←</span> Back to experience</a>
+      <a class="btn btn--ghost" href="../index.html#contact">Get in touch <span aria-hidden="true">→</span></a>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year">2026</span> Muhammad Bisaam · Lahore, Pakistan</span>
+    <span class="footer__meta">Lab notebook · details kept private</span>
+  </div>
+</footer>
+
+<script src="../js/writeup.js?v=20261009d"></script>
+</body>
+</html>
