@@ -306,7 +306,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .more a { color: var(--mauve); border-bottom: 1px solid color-mix(in srgb, var(--mauve) 40%, transparent); }
 .more a:hover { color: var(--text); }
 
-/* Toolbox */
+/* Skills */
 .toolset { padding: 24px; }
 .toolset:hover { transform: none; box-shadow: none; border-color: var(--surface1); }
 .toolset__title { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; display: flex; align-items: center; gap: .6em; }
