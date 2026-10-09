@@ -124,7 +124,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 20px; }
 .logo { font-weight: 800; font-size: 19px; color: var(--text); display: inline-flex; align-items: center; letter-spacing: -.01em; }
-.logo__at { color: var(--green); }
+.logo__dot { color: var(--green); }
 .logo__cursor { width: .55em; height: 1.05em; margin-left: 3px; background: var(--mauve); animation: blink 1.6s ease-in-out infinite; }
 .nav__links { display: flex; gap: 30px; }
 .nav__links a {
