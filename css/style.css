@@ -252,6 +252,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .tl--current .tl__org { color: var(--mauve); }
 .tl__when { font-size: 13.5px; color: var(--overlay1); letter-spacing: .05em; white-space: nowrap; }
 .tl p { color: var(--subtext0); max-width: 46em; }
+.tl__link { display: inline-flex; align-items: center; gap: .55em; margin-top: 18px; font-size: 14px; color: var(--mauve); border-bottom: 1px solid color-mix(in srgb, var(--mauve) 40%, transparent); padding-bottom: 2px; transition: color .2s ease, border-color .2s ease, gap .2s ease; }
+.tl__link:hover { color: var(--pink); border-color: var(--pink); gap: .8em; }
+.tl__link .nf { color: var(--green); }
 
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
