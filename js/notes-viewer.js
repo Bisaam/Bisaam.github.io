@@ -120,5 +120,7 @@
   while (cur) { chain.unshift(cur); cur = parentOf[cur]; }
   chain.forEach(function (nid) { if (rowById[nid] && rowById[nid]._kids) setOpen(rowById[nid], true); });
   select(start);
-  if (rowById[start]) rowById[start].scrollIntoView({ block: 'nearest' });
+  // Scroll only the tree panel (scrollIntoView would also scroll the page on load).
+  var sr = rowById[start];
+  if (sr) tree.scrollTop += sr.getBoundingClientRect().top - tree.getBoundingClientRect().top - tree.clientHeight / 3;
 })();
