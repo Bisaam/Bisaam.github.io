@@ -1,0 +1,83 @@
+/* ---------- Lab write-up pages ---------- */
+.wrap { max-width: 860px; }
+
+/* Simplified nav for sub-pages */
+.nav__back { display: inline-flex; align-items: center; gap: .5em; font-size: 14px; color: var(--overlay2); transition: color .2s ease; }
+.nav__back:hover { color: var(--text); }
+
+/* Hero */
+.wr-hero { padding: 72px 0 36px; }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--overlay1); margin-bottom: 22px; }
+.breadcrumb a { color: var(--green); }
+.breadcrumb a:hover { color: var(--text); }
+.breadcrumb .sep { color: var(--surface2); }
+.wr-titlerow { display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px 18px; }
+.wr-title { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -.03em; }
+.wr-ip { font-size: 15px; color: var(--overlay2); }
+.badge-root { display: inline-flex; align-items: center; gap: .5em; padding: 5px 13px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--green); background: color-mix(in srgb, var(--green) 12%, transparent); border: 1px solid color-mix(in srgb, var(--green) 45%, transparent); }
+.wr-lead { margin-top: 22px; font-size: 18px; color: var(--subtext0); max-width: 62ch; }
+.wr-lead strong { color: var(--text); }
+
+/* Attack chain / kill-chain stepper */
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 6px; margin-top: 30px; padding: 20px; border: 1px solid var(--surface0); border-radius: var(--radius); background: var(--mantle); }
+.chain__label { width: 100%; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--overlay1); margin-bottom: 4px; }
+.chain__step { display: inline-flex; align-items: center; gap: .5em; padding: 6px 12px; border-radius: 8px; font-size: 13.5px; color: var(--subtext1); background: var(--surface0); border: 1px solid var(--surface1); white-space: nowrap; }
+.chain__step .nf { color: var(--accent, var(--mauve)); }
+.chain__step--root { color: var(--crust); background: var(--green); border-color: var(--green); font-weight: 700; }
+.chain__arrow { color: var(--overlay0); font-weight: 700; }
+
+/* Steps */
+.step { padding-top: 56px; }
+.step__num { color: var(--green); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px; }
+.step__num::before { content: "## "; color: var(--surface2); }
+.step h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.02em; margin-bottom: 20px; }
+.step h3 { font-size: 17px; font-weight: 700; color: var(--text); margin: 30px 0 12px; }
+.step p { color: var(--subtext0); margin-bottom: 16px; }
+.step p strong { color: var(--text); }
+.step a { color: var(--blue); border-bottom: 1px dashed color-mix(in srgb, var(--blue) 50%, transparent); }
+.step a:hover { color: var(--sapphire); }
+.step ul { margin: 0 0 16px; padding-left: 0; list-style: none; }
+.step ul li { position: relative; padding-left: 1.6em; margin-bottom: 8px; color: var(--subtext0); }
+.step ul li::before { content: "▸"; position: absolute; left: 0; color: var(--mauve); }
+.step ul li strong { color: var(--text); }
+code.inline { font-family: var(--font); font-size: .9em; padding: 1px 6px; border-radius: 5px; background: var(--surface0); color: var(--peach); border: 1px solid var(--surface1); }
+
+/* Terminal command/output blocks */
+.cmd { margin: 0 0 18px; }
+.cmd .term__body { font-size: 13.5px; }
+.cmd pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: var(--font); color: var(--subtext1); }
+.cmd .ln { color: var(--green); }
+.cmd .ln::before { content: "$ "; color: var(--overlay1); }
+.cmd .ln--root::before { content: "# "; color: var(--red); }
+.cmd .out { color: var(--overlay2); }
+.cmd .hl { color: var(--yellow); }
+
+/* Redacted secrets */
+.redacted { position: relative; font-family: var(--font); padding: 1px 8px; border-radius: 5px; background: var(--surface1); color: transparent; border: 1px dashed var(--overlay0); user-select: none; letter-spacing: .1em; }
+.redacted::after { content: "redacted"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 11px; letter-spacing: .08em; color: var(--overlay1); }
+
+/* Callout */
+.note { display: flex; gap: 14px; padding: 16px 18px; border-radius: var(--radius); background: color-mix(in srgb, var(--yellow) 8%, var(--mantle)); border: 1px solid color-mix(in srgb, var(--yellow) 35%, transparent); margin: 0 0 18px; }
+.note .nf { color: var(--yellow); font-size: 1.2em; flex: none; margin-top: 2px; }
+.note p { margin: 0; color: var(--subtext1); font-size: 15px; }
+.note strong { color: var(--text); }
+
+/* Ports table */
+.ports { width: 100%; border-collapse: collapse; margin: 0 0 18px; font-size: 14px; }
+.ports th, .ports td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--surface0); }
+.ports th { color: var(--overlay1); font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.ports td:first-child { color: var(--mauve); font-weight: 700; white-space: nowrap; }
+.ports tr:last-child td { border-bottom: none; }
+.ports .star { color: var(--yellow); }
+
+/* Footer nav between writeups */
+.wr-end { margin-top: 64px; padding: 28px 0 10px; border-top: 1px solid var(--surface0); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+
+@media (max-width: 640px) {
+  .wr-hero { padding: 48px 0 24px; }
+  .step { padding-top: 44px; }
+  .cmd .term__body { font-size: 12.5px; }
+}
+
+/* Inline arrow spacing (Iosevka arrow glyph has no trailing gap) */
+.arw { margin: 0 .34em; color: inherit; }
